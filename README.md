@@ -1,4 +1,5 @@
 # TuNiApp
+![Alt text](TuNiApp_1000.png?raw=true "TuNiApp")
 TuNiApp is an user friendly web application used to manage, observe and change the Status an already implemented home automatization backend.
 A nice und comfortable UI which is optimized for display on mobile phones, tablets or computer is core of the app.
 The app itself can be installed/added to Home Screen for standalone usage and is SMALLER THAN 1MB!.
