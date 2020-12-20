@@ -10,6 +10,8 @@ self.addEventListener('install', async event => {
 const staticAssets = [
   './',
   './black.png',
+  './style.css',
+  './functions.js',
   './bootstrap.bundle.min.js',
   './bootstrap.bundle.min.js.map',
   './bootstrap.min.css',
