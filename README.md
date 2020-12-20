@@ -5,7 +5,7 @@ TuNiApp is an user friendly web application used to manage, observe and change t
 A nice und comfortable UI which is optimized for display on mobile phones, tablets or computer is core of the app.
 The app itself can be installed/added to Home Screen for standalone usage and is SMALLER THAN 1MB!.
 
-Demo: https://niklas-stephan.de/tuniapp/
+Demo: https://htmlpreview.github.io/?https://github.com/handtrixx/TuNiApp/blob/main/index.html 
 
 ## Backend
 The Backend is called via Vanilla Javscript "fetch", and expected to listen by its endpoints at /api. For security reasons and easier handling I use the reverse proxy functionallity of webserver nginx to forward all requests from /api to my Node-Red (https://nodered.org/) instance. The "magic" itself is done by nodered websockets and webservices.
