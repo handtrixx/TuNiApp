@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="de" class="bg-dark">
+
 <head>
    <title>TuniApp</title>
    <meta charset="utf-8">
@@ -7,7 +8,7 @@
    <meta name="msapplication-TileImage" content="icon_192.png">
    <meta name="msapplication-TileColor" content="#ffffff">
    <meta name="apple-mobile-web-app-status-bar" content="#212529" />
-   <meta name="theme-color" content="#212529" />   
+   <meta name="theme-color" content="#212529" />
    <link rel="apple-touch-icon" sizes="180x180" href="icon_192.png">
    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
    <link rel="shortcut icon" href="icon.ico">
@@ -16,6 +17,7 @@
    <link href="bootstrap.min.css" rel="stylesheet">
    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
    <nav id="nav" class="navbar fixed-top navbar-dark bg-dark text-light">
       <div class="container-fluid ">
@@ -311,28 +313,27 @@
       </div>
       <div class="row mt-2 mx-2">
          <div class="container-fluid">
-         <div class="row">
-            <div class="col-lg-3"></div>
-            <div class="col-12 col-lg-6 pb-2 px-0 px-sm-1">
-               <div class="card">
-                  <div class="card-header">
-                     <div class="row d-flex align-items-center">
-                        <div class="col-3">
-                           <div class="form-check form-switch">
-                              <input id="lights_avremote_power_on"
-                                 onclick="sendState('lights_avremote_power_on');"
-                                 class="form-check-input" type="checkbox">
+            <div class="row">
+               <div class="col-lg-3"></div>
+               <div class="col-12 col-lg-6 pb-2 px-0 px-sm-1">
+                  <div class="card">
+                     <div class="card-header">
+                        <div class="row d-flex align-items-center">
+                           <div class="col-3">
+                              <div class="form-check form-switch">
+                                 <input id="lights_avremote_power_on" onclick="sendState('lights_avremote_power_on');"
+                                    class="form-check-input" type="checkbox">
+                              </div>
                            </div>
+                           <div class="col-5">
+
+                           </div>
+                           <div class="col-4 text-center px-0">
+                              Vol.: <span id="tv_remote_volume"></span>
+                           </div>
+
                         </div>
-                        <div class="col-5">
-                           
-                        </div>
-                        <div class="col-4 text-center px-0">
-                           Vol.: <span id="tv_remote_volume"></span>
-                        </div>
-          
                      </div>
-                  </div>
                      <div class="card-body p-0">
                         <div class="container-fluid px-0">
                            <div class="row d-flex mt-2 mb-5 align-items-center">
@@ -347,9 +348,9 @@
                                  </svg>
                               </div>
                               <div class="col-8 text-center pt-2">
-                                 <input id="tv_remote_volSlide" onchange="sendState('tv_remote_volSlide');"
-                                    type="range" class="form-range" min="-600" max="-100" step="5">
-               
+                                 <input id="tv_remote_volSlide" onchange="sendState('tv_remote_volSlide');" type="range"
+                                    class="form-range" min="-600" max="-100" step="5">
+
                               </div>
                               <div class="col-2 ps-0">
                                  <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-volume-up"
@@ -368,30 +369,28 @@
                            </div>
                            <div class="row d-flex my-2 align-items-center">
                               <div class="col-4">
-               
+
                               </div>
                               <div class="col-4 text-center">
                                  <button type="button" onclick="sendState('tv_remote_navUp');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-caret-up-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-up-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path
                                           d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
                                     </svg>
                                  </button>
                               </div>
                               <div class="col-4">
-               
+
                               </div>
                            </div>
                            <div class="row d-flex my-2 align-items-center">
                               <div class="col-4 text-end">
                                  <button type="button" onclick="sendState('tv_remote_navLeft');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-caret-left-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-left-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path
                                           d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                                     </svg>
@@ -400,9 +399,8 @@
                               <div class="col-4 text-center">
                                  <button type="button" onclick="sendState('tv_remote_navSel');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-diamond-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-diamond-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.482 1.482 0 0 1 0-2.098L6.95.435z" />
                                     </svg>
@@ -411,9 +409,8 @@
                               <div class="col-4">
                                  <button type="button" onclick="sendState('tv_remote_navRight');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-caret-right-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-right-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path
                                           d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                                     </svg>
@@ -422,30 +419,28 @@
                            </div>
                            <div class="row d-flex my-2 align-items-center">
                               <div class="col-4">
-               
+
                               </div>
                               <div class="col-4 text-center">
                                  <button type="button" onclick="sendState('tv_remote_navDown');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-caret-down-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-caret-down-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path
                                           d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                                     </svg>
                                  </button>
                               </div>
                               <div class="col-4">
-               
+
                               </div>
                            </div>
                            <div class="row d-flex mb-2 mt-5 align-items-center">
                               <div class="col-4 text-end">
                                  <button type="button" onclick="sendState('tv_remote_navReturn');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-backspace-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-backspace-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M15.683 3a2 2 0 0 0-2-2h-7.08a2 2 0 0 0-1.519.698L.241 7.35a1 1 0 0 0 0 1.302l4.843 5.65A2 2 0 0 0 6.603 15h7.08a2 2 0 0 0 2-2V3zM5.829 5.854a.5.5 0 1 1 .707-.708l2.147 2.147 2.146-2.147a.5.5 0 1 1 .707.708L9.39 8l2.146 2.146a.5.5 0 0 1-.707.708L8.683 8.707l-2.147 2.147a.5.5 0 0 1-.707-.708L7.976 8 5.829 5.854z" />
                                     </svg>
@@ -454,9 +449,8 @@
                               <div class="col-4 text-center">
                                  <button type="button" onclick="sendState('tv_remote_navHome');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-house-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-house-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
                                        <path fill-rule="evenodd"
@@ -467,9 +461,8 @@
                               <div class="col-4">
                                  <button type="button" onclick="sendState('tv_remote_mute');"
                                     class="btn btn-lg btn-outline-light">
-                                    <svg width="30px" height="30px" viewBox="0 0 16 16"
-                                       class="bi bi-volume-mute-fill" fill="currentColor"
-                                       xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="30px" height="30px" viewBox="0 0 16 16" class="bi bi-volume-mute-fill"
+                                       fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                        <path fill-rule="evenodd"
                                           d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06zm7.137 2.096a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708l4-4a.5.5 0 0 1 .708 0z" />
                                        <path fill-rule="evenodd"
@@ -486,8 +479,8 @@
             </div>
          </div>
       </div>
-         
-      </div>
+
+   </div>
    <div id="sensors" class="container-fluid px-0 pt-5 mt-2">
       <div class="row">
          <div class="col-12">
@@ -563,9 +556,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_temp_badezimmer" class="progress-bar"
-                                 role="progressbar" style="width: 50%;" aria-valuenow="25"
-                                 aria-valuemin="0" aria-valuemax="50">-
+                              <div id="status_temp_badezimmer" class="progress-bar" role="progressbar"
+                                 style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="50">-
                               </div>
                            </div>
                         </div>
@@ -576,9 +568,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_temp_flur" class="progress-bar" role="progressbar"
-                                 style="width: 50%;" aria-valuenow="25" aria-valuemin="0"
-                                 aria-valuemax="50">-
+                              <div id="status_temp_flur" class="progress-bar" role="progressbar" style="width: 50%;"
+                                 aria-valuenow="25" aria-valuemin="0" aria-valuemax="50">-
                               </div>
                            </div>
                         </div>
@@ -589,8 +580,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_temp_wohnzimmer" class="progress-bar"
-                                 role="progressbar" aria-valuemin="0" aria-valuemax="50">-
+                              <div id="status_temp_wohnzimmer" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                 aria-valuemax="50">-
                               </div>
                            </div>
                         </div>
@@ -601,8 +592,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_kassel_temp" class="progress-bar" role="progressbar"
-                                 aria-valuemin="0" aria-valuemax="50">-
+                              <div id="status_kassel_temp" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                 aria-valuemax="50">-
                               </div>
                            </div>
                         </div>
@@ -625,8 +616,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_humid_badezimmer" class="progress-bar"
-                                 role="progressbar" aria-valuemin="0" aria-valuemax="100">-
+                              <div id="status_humid_badezimmer" class="progress-bar" role="progressbar"
+                                 aria-valuemin="0" aria-valuemax="100">-
                               </div>
                            </div>
                         </div>
@@ -637,8 +628,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_humid_wohnzimmer" class="progress-bar"
-                                 role="progressbar" aria-valuemin="0" aria-valuemax="100">-
+                              <div id="status_humid_wohnzimmer" class="progress-bar" role="progressbar"
+                                 aria-valuemin="0" aria-valuemax="100">-
                               </div>
                            </div>
                         </div>
@@ -649,8 +640,8 @@
                         </div>
                         <div class="col-6 text-end">
                            <div class="progress">
-                              <div id="status_kassel_humid" class="progress-bar" role="progressbar"
-                                 aria-valuemin="0" aria-valuemax="100">-</div>
+                              <div id="status_kassel_humid" class="progress-bar" role="progressbar" aria-valuemin="0"
+                                 aria-valuemax="100">-</div>
                            </div>
                         </div>
                      </div>
@@ -658,12 +649,11 @@
                </ul>
             </div>
          </div>
-      
+
          <div class="col-12 col-md-6 col-xl-8 pb-2 px-0 px-sm-1">
-            
-               <img id="kasselcam" onclick="updateKasselcam();" width="100%" height="100%"
-                  src="black.png">
-           
+
+            <img id="kasselcam" onclick="updateKasselcam();" width="100%" height="100%" src="black.png">
+
          </div>
 
       </div>
@@ -719,9 +709,9 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id='status_arbeitszimmer_schalter_reachable' width="1em"
-                              height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill"
-                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                           <svg id='status_arbeitszimmer_schalter_reachable' width="1em" height="1em"
+                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -733,9 +723,8 @@
                            Licht 1
                         </div>
                         <div class="col-4 text-end">
-                           <svg id="status_arbeitszimmer_licht1_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_arbeitszimmer_licht1_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -747,9 +736,8 @@
                            Licht 2
                         </div>
                         <div class="col-4 text-end">
-                           <svg id="status_arbeitszimmer_licht2_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_arbeitszimmer_licht2_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -761,9 +749,8 @@
                            Licht 3
                         </div>
                         <div class="col-4 text-end">
-                           <svg id="status_arbeitszimmer_licht3_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_arbeitszimmer_licht3_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -775,9 +762,8 @@
                            Licht 4
                         </div>
                         <div class="col-4 text-end">
-                           <svg id="status_arbeitszimmer_licht4_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_arbeitszimmer_licht4_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -789,9 +775,8 @@
                            Licht Yoga
                         </div>
                         <div class="col-4 text-end">
-                           <svg id="status_arbeitszimmer_yoga_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_arbeitszimmer_yoga_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -817,9 +802,8 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id="status_badezimmer_sensor_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_badezimmer_sensor_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -843,9 +827,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_balkon_licht_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_balkon_licht_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -871,9 +854,8 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id="status_flur_schalter_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_flur_schalter_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -889,9 +871,8 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id="status_flur_sensor_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_flur_sensor_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -904,9 +885,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_flur_schrank_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_flur_schrank_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -919,9 +899,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_flur_telefon_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_flur_telefon_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -942,14 +921,13 @@
                            Schalter Niklas
                         </div>
                         <div class="col-2">
-                           <span id='status_schlafzimmer_schalterniklas_battery'
-                              class="badge">-</span>
+                           <span id='status_schlafzimmer_schalterniklas_battery' class="badge">-</span>
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id='status_schlafzimmer_schalterniklas_reachable' width="1em"
-                              height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill"
-                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                           <svg id='status_schlafzimmer_schalterniklas_reachable' width="1em" height="1em"
+                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -961,14 +939,13 @@
                            Schalter Tutku
                         </div>
                         <div class="col-2">
-                           <span id='status_schlafzimmer_schaltertutku_battery'
-                              class="badge">-</span>
+                           <span id='status_schlafzimmer_schaltertutku_battery' class="badge">-</span>
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id='status_schlafzimmer_schaltertutku_reachable' width="1em"
-                              height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill"
-                              fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                           <svg id='status_schlafzimmer_schaltertutku_reachable' width="1em" height="1em"
+                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
+                              xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -981,9 +958,8 @@
                         </div>
 
                         <div class="col-4 text-end">
-                           <svg id="status_schlafzimmer_niklas_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_schlafzimmer_niklas_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -997,9 +973,8 @@
 
                         <div class="col-4 text-end">
 
-                           <svg id="status_schlafzimmer_tutku_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_schlafzimmer_tutku_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1013,9 +988,8 @@
 
                         <div class="col-4 text-end">
 
-                           <svg id="status_schlafzimmer_strom_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_schlafzimmer_strom_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1041,9 +1015,8 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id="status_wohnzimmer_sensor_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_sensor_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1059,9 +1032,8 @@
                         </div>
                         <div class="col-2 text-end">
 
-                           <svg id="status_wohnzimmer_schalter_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_schalter_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1074,9 +1046,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_strom_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_strom_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1089,9 +1060,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_tv_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_tv_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1104,9 +1074,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_vitrine_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_vitrine_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1119,9 +1088,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_esstisch_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_esstisch_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1134,9 +1102,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_komode_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_komode_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1149,9 +1116,8 @@
                         </div>
                         <div class="col-4 text-end">
 
-                           <svg id="status_wohnzimmer_av_reachable" width="1em" height="1em"
-                              viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor"
-                              xmlns="http://www.w3.org/2000/svg">
+                           <svg id="status_wohnzimmer_av_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                              class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="8" />
                            </svg>
                         </div>
@@ -1199,7 +1165,8 @@
                         cloud.handtrixxx.com
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_cloud_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_cloud_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -1211,7 +1178,8 @@
                         niklas-stephan.de
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_niklas-stephan_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_niklas-stephan_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -1223,7 +1191,8 @@
                         quickscot.de
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_quickscot_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_quickscot_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -1235,7 +1204,8 @@
                         home.handtrixxx.com
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_home_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_home_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -1247,7 +1217,8 @@
                         shop.bbraun.com
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_shopbbraun_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_shopbbraun_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -1259,7 +1230,8 @@
                         linutra.com
                      </div>
                      <div class="col-2 text-end">
-                        <svg id="status_webmon_linutra_reachable" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg id="status_webmon_linutra_reachable" width="1em" height="1em" viewBox="0 0 16 16"
+                           class="bi bi-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                            <circle cx="8" cy="8" r="8"></circle>
                         </svg>
                      </div>
@@ -2303,7 +2275,7 @@
    <script src="masonry.pkgd.min.js"></script>
    <script src="functions.js"></script>
    <script>
-      console.log("%cWelcome to TuNiApp - v1.02", "color: blue; font-size: x-large");
+      console.log("%cWelcome to TuNiApp - v1.2", "color: blue; font-size: x-large");
       goInit();
       updateAll();
       updateKasselcam();
@@ -2312,8 +2284,9 @@
       }, 10000);
       window.addEventListener('load', e => {
          //new PWAConfApp();
-         registerSW(); 
+         registerSW();
       });
    </script>
 </body>
+
 </html>

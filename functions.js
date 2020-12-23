@@ -650,10 +650,10 @@ function refreshUi(device, deviceStatus) {
    else if (device === "lights/wohnzimmer/av") {
       if (deviceStatus.reachable === true) {
          document.getElementById('status_wohnzimmer_av_reachable').style.color = "#094609";
-      
+
       } else {
          document.getElementById('status_wohnzimmer_av_reachable').style.color = "#6f0f0f";
-        
+
       }
    }
    else if (device === "lights/sensor/presence") {
@@ -812,8 +812,8 @@ function refreshUi(device, deviceStatus) {
    }
 }
 function updateAll() {
-   var logdata = timestamp('timestamp')+ " - Refreshing Api Data";
-   console.log("%c"+logdata, "color: green;");
+   var logdata = timestamp('timestamp') + " - Refreshing Api Data";
+   console.log("%c" + logdata, "color: green;");
    updateStatus('system');
    updateStatus('lights/arbeitszimmer');
    updateStatus('lights/arbeitszimmer/licht1');
@@ -915,8 +915,8 @@ function postStatus(device, action, value) {
    var content = '{ "' + action + '": ' + value + ' }';
    postData('api/post/' + device, content)
       .then(data => {
-         var logdata = timestamp('timestamp')+ " - Send command: "+content+" to: "+device;
-         console.log("%c"+logdata, "color: green;");
+         var logdata = timestamp('timestamp') + " - Send command: " + content + " to: " + device;
+         console.log("%c" + logdata, "color: green;");
          //console.log(data);
       });
 }
