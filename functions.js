@@ -122,7 +122,6 @@ function goTo(where) {
       document.getElementById("nav").style.display = "block";
    }
 }
-
 function slideshow() {
    var random = (Math.floor(Math.random() * 10000));
    var date = timestamp("date");
@@ -131,7 +130,6 @@ function slideshow() {
    document.getElementById("screensaverDate").innerHTML = date;
    document.getElementById("screensaverTime").innerHTML = time;
 }
-
 function goInit() {
    document.getElementById("nav").style.display = "block";
    document.getElementById("main").style.display = "block";
@@ -149,7 +147,6 @@ function goInit() {
    document.getElementById("loading").classList.remove("d-flex");
    document.getElementById("loading").classList.add("d-none");
 }
-
 function fullscreen() {
    var element = document.documentElement;
    if (event instanceof HTMLElement) {
@@ -160,11 +157,9 @@ function fullscreen() {
    document.cancelFullScreen = document.cancelFullScreen || document.webkitCancelFullScreen || document.mozCancelFullScreen || function () { return false; };
    isFullscreen ? document.cancelFullScreen() : element.requestFullScreen();
 }
-
 function refresh() {
    location.reload();
 }
-
 function xyToRgb(x, y, bri) {
    z = 1.0 - x - y;
    Y = bri / 255.0;
@@ -210,7 +205,6 @@ function RGBToHex(r, g, b) {
 
    return "#" + r + g + b;
 }
-
 function hexToRGB(h) {
    let r = 0, g = 0, b = 0;
 
@@ -236,7 +230,6 @@ function hexToRGB(h) {
    };
    return obj;
 }
-
 function RGBToXy(value) {
    var input = value;
    var array = rgb_to_cie(input.r, input.g, input.b);
@@ -268,7 +261,6 @@ function RGBToXy(value) {
 
    return array;
 }
-
 function updateStatus(device) {
    let url = 'api/' + device;
    fetch(url).then(function (response) {
@@ -284,7 +276,6 @@ function updateStatus(device) {
       refreshUi(device, deviceStatus);
    });
 }
-
 function refreshUi(device, deviceStatus) {
    //console.log(device);
    //console.log(deviceStatus);
@@ -659,10 +650,10 @@ function refreshUi(device, deviceStatus) {
    else if (device === "lights/wohnzimmer/av") {
       if (deviceStatus.reachable === true) {
          document.getElementById('status_wohnzimmer_av_reachable').style.color = "#094609";
-         document.getElementById('tv_remote_reachable').style.color = "#094609";
+      
       } else {
          document.getElementById('status_wohnzimmer_av_reachable').style.color = "#6f0f0f";
-         document.getElementById('tv_remote_reachable').style.color = "#6f0f0f";
+        
       }
    }
    else if (device === "lights/sensor/presence") {
@@ -820,9 +811,9 @@ function refreshUi(device, deviceStatus) {
       }
    }
 }
-
 function updateAll() {
-   console.log("Refreshing Api Data...");
+   var logdata = timestamp('timestamp')+ " - Refreshing Api Data";
+   console.log("%c"+logdata, "color: green;");
    updateStatus('system');
    updateStatus('lights/arbeitszimmer');
    updateStatus('lights/arbeitszimmer/licht1');
@@ -871,13 +862,11 @@ function updateAll() {
    updateStatus('lights/webmon/shopbbraun');
    updateCalendar();
 }
-
 function updateKasselcam() {
    var random = (Math.floor(Math.random() * 10000));
    value = "api/webcam?" + random;
    document.getElementById('kasselcam').setAttribute("src", value);
 }
-
 function updateCalendar() {
    let url = 'api/cal';
    fetch(url).then(function (response) {
@@ -908,14 +897,13 @@ function updateCalendar() {
 
       document.getElementById('calendarContent').innerHTML = html;
    }).catch(function (error) {
-      console.log("Fehler beim Abruf des Kalenders");
-      console.log(error);
+      console.log("%cFehler beim Abruf des Kalenders", "color: red;");
+      //console.log(error);
       var html = '<li class="list-group-item"><h5>Fehler beim Abruf</h5></li>';
       document.getElementById('calendarContent').innerHTML = html;
    });
 
 }
-
 function postStatus(device, action, value) {
    async function postData(url = '', data) {
       const response = await fetch(url, {
@@ -927,10 +915,11 @@ function postStatus(device, action, value) {
    var content = '{ "' + action + '": ' + value + ' }';
    postData('api/post/' + device, content)
       .then(data => {
-         console.log(data);
+         var logdata = timestamp('timestamp')+ " - Send command: "+content+" to: "+device;
+         console.log("%c"+logdata, "color: green;");
+         //console.log(data);
       });
 }
-
 function sendState(item) {
    if (item == "lights_arbeitszimmer_on") {
       value = document.getElementById('lights_arbeitszimmer_on').checked;
@@ -1152,7 +1141,6 @@ function sendState(item) {
                                                                                                                                                                }
    setTimeout(() => { updateAll(); }, 2000);
 }
-
 async function registerSW() {
    if ('serviceWorker' in navigator) {
       try {
@@ -1164,5 +1152,3 @@ async function registerSW() {
 
    }
 }
-
-
