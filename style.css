@@ -210,6 +210,10 @@ svg:hover {
    width: 100vw;
    background-image: url('black.png');
    background-size: cover;
+   
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center;
 
 }
 
